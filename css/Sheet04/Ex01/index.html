@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .pokemon-card {
+        height: 230px;
+        width: 210px;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+      }
+
+      .pokemon-image {
+        display: flex;
+        justify-content: center;
+        height: 50%;
+        background-color: lightgray;
+      }
+
+      .pokemon-info {
+        height: 50%;
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" class="pokemon-search" placeholder="Search for name" />
+    <div class="pokemon-grid">
+      <div class="pokemon-card">
+        <div class="pokemon-image">
+          <img
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+          />
+        </div>
+        <div class="pokemon-info"></div>
+      </div>
+    </div>
+  </body>
+</html>
