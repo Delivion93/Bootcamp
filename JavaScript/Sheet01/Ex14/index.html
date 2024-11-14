@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js"></script>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      #result {
+        display: flex;
+        justify-content: center;
+      }
+      #input {
+        width: 225px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>EX14 Juego de Adivinanza</h1>
+    <ul>
+      <li>
+        Escribe un programa que genere un número aleatorio entre 1 y 100 y
+        permita al usuario adivinarlo, indicando si el número es mayor o menor
+        en cada intento. Deberá mostrar en rojo los mensajes de “El número es
+        mayor” o “El número es menor” y en verde el texto “¡Correcto!” cuando
+        haya adivinado el número.
+      </li>
+      <div class="container">
+        <input
+          type="number"
+          placeholder="Pon aquí tu suposición entre 1-100"
+          id="input"
+        />
+        <button onclick="guessNumber()">Adivinar</button>
+      </div>
+      <div id="result"></div>
+    </ul>
+  </body>
+</html>
