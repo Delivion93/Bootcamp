@@ -5,7 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <style></style>
+    <script src="script.js"></script>
+    <style>
+      /* <div class="card"> +
+          <div class="card-top"> +
+            <img+
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+            />
+            <p class="ID">ID/1</p>+
+          </div>
+          <div class="card-bottom">
+            <h2>Bulbasaur</h2>+
+            <ul class="type-list">+
+              <li>poison</li>
+              <li>grass</li>
+            </ul>
+            <div class="evolution"> +
+              <p>Evoluciona de:</p>
+              <p class="evolution-name">bulbasaur</p>
+            </div>
+          </div>
+        </div> */
+    </style>
   </head>
   <body>
     <div class="container">
@@ -14,27 +35,8 @@
         class="pokemon-search"
         placeholder="Filtra pokemon por nombre..."
       />
-      <div class="grid">
-        <div class="card">
-          <div class="card-top">
-            <img
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
-            />
-            <p class="ID">ID/1</p>
-          </div>
-          <div class="card-bottom">
-            <h2>Bulbasaur</h2>
-            <ul class="type-list">
-              <li>poison</li>
-              <li>grass</li>
-            </ul>
-            <div class="pokemon-evolution">
-              <p>Evoluciona de:</p>
-              <p class="evolution-name">bulbasaur</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <input type="button" value="TEST" onclick="createCard()" />
+      <div id="grid"></div>
     </div>
   </body>
 </html>

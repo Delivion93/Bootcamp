@@ -16,7 +16,7 @@ body {
   width: 80%;
 }
 
-.grid {
+#grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
@@ -77,11 +77,11 @@ body {
   height: 20px;
 }
 
-.pokemon-evolution {
+.evolution {
   border: 4px rgb(93 49 24);
   border-left-style: solid;
 }
-.pokemon-evolution p {
+.evolution p {
   margin: 0;
   padding-left: 5px;
 }
