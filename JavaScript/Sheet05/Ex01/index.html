@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --typeColor: rgb(156, 142, 126);
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: yellow;
+      }
+
+      .pokemon-search {
+        font-size: 25px;
+        font-family: Arial;
+        text-align: center;
+        height: 45px;
+        width: 80%;
+      }
+
+      .pokemon-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      .pokemon-card {
+        height: 275px;
+        width: 245px;
+        border: 2px solid hwb(0 81% 18%);
+        border-radius: 1px;
+        box-shadow: 0 2px 15px rgba(160, 159, 154, 0.425);
+        overflow: hidden;
+        text-align: start;
+      }
+
+      .pokemon-image {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: 50%;
+        width: auto;
+        background-color: rgb(223 223 223);
+      }
+
+      .pokemon-info {
+        height: 50%;
+        background-color: aliceblue;
+      }
+
+      .ID {
+        background-color: rgb(209 205 202);
+        padding: 0px 15px;
+        margin: 0px;
+        position: absolute;
+        bottom: 0;
+        right: 185px;
+      }
+
+      .pokemon-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 15px 0px 0px 10px;
+      }
+      .pokemon-info h2,
+      .pokemon-type {
+        display: flex;
+        margin: 0px;
+        margin-bottom: 5px;
+      }
+
+      .type-item {
+        color: var(--typeColor);
+        margin: 2px;
+        padding: 4px;
+        border: 1px solid var(--typeColor);
+        border-radius: 10px;
+        height: 20px;
+      }
+
+      .pokemon-evolution {
+        border: 4px rgb(93 49 24);
+        border-left-style: solid;
+      }
+      .pokemon-evolution p {
+        margin: 0;
+        padding-left: 5px;
+      }
+      .evolution-name {
+        font-size: 23px;
+      }
+
+      .pokemon-evolution p:not(.evolution-name) {
+        color: var(--typeColor);
+      }
+    </style>
+  </head>
+  <body>
+    <input
+      type="text"
+      class="pokemon-search"
+      placeholder="Filtra pokemon por nombre..."
+    />
+    <div class="pokemon-grid">
+      <div class="pokemon-card">
+        <div class="pokemon-image">
+          <img
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+          />
+          <p class="ID">ID/1</p>
+        </div>
+        <div class="pokemon-info">
+          <h2>Bulbasaur</h2>
+          <div class="pokemon-type">
+            <p class="type-item">POISON</p>
+            <p class="type-item">GRASS</p>
+          </div>
+          <div class="pokemon-evolution">
+            <p>Evoluciona de:</p>
+            <p class="evolution-name">bulbasaur</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
