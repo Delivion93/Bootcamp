@@ -34,9 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const evolutionDiv = document.createElement("div");
       evolutionDiv.className = "evolution";
       cardBottom.appendChild(evolutionDiv);
-      const evolutionP = document.createElement("p");
+      const evolutionP = document.createElement("div");
       evolutionP.textContent = "Evoluciona de:";
-      const evolutionName = document.createElement("p");
+      evolutionP.id = "evoFrom";
+      const evolutionName = document.createElement("div");
+
       evolutionName.className = "evolution-name";
       evolutionName.textContent = evolution.name;
       evolutionDiv.appendChild(evolutionP);
