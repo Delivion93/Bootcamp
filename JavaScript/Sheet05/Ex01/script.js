@@ -20,7 +20,7 @@
         </div> */
 }
 // function createCard(img, id, name, types, evolution)
-function createCard(img, id, name) {
+function createCard(img, id, name, types) {
   const grid = document.getElementById("grid");
   const card = document.createElement("div");
   card.className = "card";
@@ -51,6 +51,11 @@ function createCard(img, id, name) {
   cardTop.appendChild(pId);
   cardBottom.appendChild(h2);
   cardBottom.appendChild(list);
+  types.forEach((type) => {
+    const typeItem = document.createElement("li");
+    typeItem.textContent = type.type.name;
+    list.appendChild(typeItem);
+  });
   cardBottom.appendChild(evolutionDiv);
   evolutionDiv.appendChild(evolutionP);
   evolutionDiv.appendChild(evolutionName);
@@ -64,13 +69,14 @@ async function getPokemons() {
   const pokemonPromises = data.results.map(async (element) => {
     const pokemonResponse = await fetch(element.url);
     const pokemonInfo = await pokemonResponse.json();
-    let name = pokemonInfo.name;
-    let image = pokemonInfo.sprites.front_default;
-    let id = pokemonInfo.id;
-    return { img: image, id: id, name: name };
+    const name = pokemonInfo.name;
+    const image = pokemonInfo.sprites.front_default;
+    const id = pokemonInfo.id;
+    const types = pokemonInfo.types;
+    return { img: image, id: id, name: name, type: types };
   });
   pokemons = await Promise.all(pokemonPromises);
   pokemons.forEach((pokemon) => {
-    createCard(pokemon.img, pokemon.id, pokemon.name);
+    createCard(pokemon.img, pokemon.id, pokemon.name, pokemon.type);
   });
 }
