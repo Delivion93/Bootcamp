@@ -1,5 +1,5 @@
 #!/bin/bash
-for i in {1..15}
+for i in {8..15}
 do
         folder=$(printf "Ex%02d" $i)
         mkdir "$folder"

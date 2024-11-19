@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js"></script>
+    <style>
+      .container {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .buttons {
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>EX15 Cronómetro</h1>
+    <ul>
+      <li>
+        Crea un cronómetro simple que comience a contar al hacer clic en un
+        botón y se detenga al hacer clic en otro botón. El contador deberá
+        mostrar el número de segundos transcurridos.
+      </li>
+    </ul>
+    <div class="container">
+      <div class="buttons">
+        <button onclick="start()">Iniciar</button>
+        <button onclick="stop()">Detener</button>
+      </div>
+      <p id="seconds">0</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js"></script>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      #magicDiv {
+        font-size: 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        height: 500px;
+        transition: background-color 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="magicDiv"
+      onmouseover="changeBackgorungColor()"
+      onmouseout="changeBackgorungColor()"
+    >
+      Magic
+    </div>
+  </body>
+</html>
