@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Formulario from "./components/Formulario";
+import Formulario from "./components/Formulario/Formulario";
 import "./App.css";
 
 function App() {
