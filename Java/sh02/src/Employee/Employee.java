@@ -1,8 +1,9 @@
 package Employee;
 
+import Interfaces.Printable;
 import Person.Person;
 
-public class Employee extends Person {
+public class Employee extends Person  implements Printable {
     int salary;
 
     public int getSalary() {
@@ -19,8 +20,9 @@ public class Employee extends Person {
     }
 
     @Override
-    public void printDetails() {
+    public void print() {
         System.out.println("name: "+getName()+" age: "+getAge()+" salary: "+this.salary);
     }
+
 
 }

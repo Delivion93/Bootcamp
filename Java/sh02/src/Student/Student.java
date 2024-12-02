@@ -1,8 +1,9 @@
 package Student;
 
+import Interfaces.Printable;
 import Person.Person;
 
-public class Student extends Person {
+public class Student extends Person implements Printable {
     private String degree;
     public Student(String name, int age, String degree) {
         super(name, age);
@@ -18,7 +19,7 @@ public class Student extends Person {
     }
 
     @Override
-    public void printDetails() {
+    public void print() {
         System.out.println("name: "+getName()+" age: "+getAge()+" degree :"+this.degree);
     }
 

@@ -1,5 +1,7 @@
 package Person;
 
+import Interfaces.Printable;
+
 public class Person {
     private String name;
     private int age;
@@ -20,7 +22,8 @@ public class Person {
         this.age = age;
     }
 
-    public void printDetails(){
+
+    public void printDetails() {
         System.out.println("name: "+this.name+" age: "+age);
     }
 
