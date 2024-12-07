@@ -1,5 +1,8 @@
 import ex01.Book;
 import ex02.PC;
+import ex03.Department;
+import ex03.Employees;
+import exeptions.IncorrectNifFormatExeption;
 import exeptions.IncorrectRamException;
 
 public class Main {
@@ -39,6 +42,7 @@ public class Main {
             pc1.transferFiles(1000);
             pc2.transferFiles(1000);
 
+            System.out.println();
             System.out.println(pc1);
             System.out.println(pc2);
             System.out.println(pc3);
@@ -46,8 +50,37 @@ public class Main {
             e.printStackTrace();
         }
 
+        try {
 
+            Employees emp1 = new Employees("1-AAAAA-1", "Ivan", 35,  Department.ACCOUNTING, true, "2-BBBBBBB-2");
+            Employees emp2 = new Employees("2-CCCCC-2", "Maria", 28, Department.COMPUTING, false, "3-CCCCCCC-3");
+            Employees emp3 = new Employees("3-DDDDD-3", "Emilio", 45, Department.MANAGEMENT, true, "4-DDDDDDD-4");
+            Employees emp4 = new Employees("1-AAAAA-1", "Artem", 31, Department.COMPUTING, true, "5-FFFFFFF-5");
+
+            System.out.println();
+            System.out.println(emp1);
+            emp1.calcSalary();
+            System.out.println();
+
+            System.out.println(emp2);
+            emp2.calcSalary();
+            System.out.println();
+
+            System.out.println(emp3);
+            emp3.calcSalary();
+            System.out.println();
+
+
+            System.out.println("emp1 equals emp2: " + emp1.equals(emp2));
+            System.out.println("emp1 equals emp3: " + emp1.equals(emp3));
+            System.out.println("emp2 equals emp3: " + emp2.equals(emp3));
+            System.out.println("emp1 equals emp4: " + emp1.equals(emp4));
+
+        } catch (IncorrectNifFormatExeption e) {
+            e.printStackTrace();
+        }
 
 
     }
 }
+

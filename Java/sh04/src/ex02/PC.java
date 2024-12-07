@@ -76,11 +76,11 @@ public class PC {
     }
 
     @Override
-    public boolean equals(Object o){
-        if(o == null || getClass() != o.getClass()){
+    public boolean equals(Object obj){
+        if(obj == null || getClass() != obj.getClass()){
             return false;
         }
-        PC object = (PC)o;
+        PC object = (PC)obj;
         return this.brand.equals(object.brand)&&this.model.equals(object.model);
     }
 
