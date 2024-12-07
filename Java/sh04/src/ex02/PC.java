@@ -75,4 +75,9 @@ public class PC {
         }
     }
 
+    @Override
+    public String toString(){
+        return "ex01.Book "+isbn+" with title "+title+" and author "+author+" has "+numberOfPages+" pages and is "+state;git
+    }
+
 }

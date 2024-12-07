@@ -52,6 +52,6 @@ public class Book {
         }else{
             state="in the library";
         }
-            return "ex01.Book "+isbn+" with title "+title+" and author "+author+" has "+numberOfPages+" pages and is "+state;
+            return "Book "+isbn+" with title "+title+" and author "+author+" has "+numberOfPages+" pages and is "+state;
     }
 }
