@@ -41,7 +41,7 @@ public class Book {
         double price = (double)PRINT_PAGE_PRICE*numberOfPages;
         DecimalFormat df = new DecimalFormat("#.00");
         String formatedPrice = df.format(price);
-        System.out.printf("total price for printing \"%s\" is %s euro",title,formatedPrice);
+        System.out.printf("total price for printing \"%s\" is %s euro\n",title,formatedPrice);
     }
 
     @Override
@@ -52,6 +52,6 @@ public class Book {
         }else{
             state="in the library";
         }
-            return "Book "+isbn+" with title "+title+" and author "+author+" has "+numberOfPages+" pages and is "+state;
+            return "Book <"+isbn+"> with title <"+title+"> and author <"+author+"> has <"+numberOfPages+"> pages and is <"+state+">";
     }
 }

@@ -51,11 +51,11 @@ public class PC {
 
     public void transferFiles(int filesSize){
         if(isEnabled){
-            if((gbOfStorageUsing+filesSize)>gbOfStorageUsing){
+            if((gbOfStorageUsing+filesSize)>gbOfDiskStorage){
                 System.out.println("not enough storage space");
             }else {
                 gbOfStorageUsing+=filesSize;
-                System.out.printf("done\n%d Gb left on disk",gbOfDiskStorage-gbOfStorageUsing);
+                System.out.printf("done\n%d Gb left on disk\n",gbOfDiskStorage-gbOfStorageUsing);
             }
         }else{
             System.out.println("Pc is turned off");
@@ -64,11 +64,11 @@ public class PC {
 
     public void deleteFiles(int filesSize){
         if(isEnabled){
-            if((gbOfStorageUsing+filesSize)>gbOfStorageUsing){
+            if((gbOfStorageUsing+filesSize)>gbOfDiskStorage){
                 gbOfStorageUsing=0;
             }else {
                 gbOfStorageUsing-=filesSize;
-                System.out.printf("done\n%d Gb left on disk",gbOfDiskStorage-gbOfStorageUsing);
+                System.out.printf("done\n%d Gb left on disk\n",gbOfDiskStorage-gbOfStorageUsing);
             }
         }else{
             System.out.println("Pc is turned off");
@@ -76,8 +76,23 @@ public class PC {
     }
 
     @Override
+    public boolean equals(Object o){
+        if(o == null || getClass() != o.getClass()){
+            return false;
+        }
+        PC object = (PC)o;
+        return this.brand.equals(object.brand)&&this.model.equals(object.model);
+    }
+
+    @Override
     public String toString(){
-        return "ex01.Book "+isbn+" with title "+title+" and author "+author+" has "+numberOfPages+" pages and is "+state;git
+        return "Pc: brand: "+brand
+                +" model: "+model
+                +" RAM "+gbOfRam+"GB "
+                +"disk storage: "
+                +gbOfDiskStorage+"GB Storage used "
+                +gbOfStorageUsing+"GB is enabled "
+                +isEnabled;
     }
 
 }
