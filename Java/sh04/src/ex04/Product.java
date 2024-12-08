@@ -34,9 +34,8 @@ public class Product {
         idCounter++;
     }
 
-    public void byu(int quantity){
-        float toPay = price*quantity;
-        System.out.println("total cost is "+toPay);
+    public float byu(int quantity){
+        return price*quantity;
     }
 
     @Override

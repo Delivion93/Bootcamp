@@ -12,14 +12,14 @@ public class FreshProduct extends Product{
     }
 
     @Override
-    public void byu(int quantity) {
+    public float byu(int quantity) {
         float toPay = this.getPrice()*quantity;
         if(daysOfExpiration>=3&&daysOfExpiration<=5){
             toPay*=0.6f;
         }else if(daysOfExpiration<3){
             toPay*= 0.3f;
         }
-        System.out.println("total cost is "+toPay);
+        return toPay;
     }
 
     @Override public String toString() {
