@@ -11,6 +11,10 @@ public class FreshProduct extends Product{
         this.daysOfExpiration = daysOfExpiration;
     }
 
+    public int getDaysOfExpiration() {
+        return daysOfExpiration;
+    }
+
     @Override
     public float byu(int quantity) {
         float toPay = this.getPrice()*quantity;

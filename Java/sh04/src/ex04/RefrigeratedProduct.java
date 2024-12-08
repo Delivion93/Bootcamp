@@ -11,6 +11,10 @@ public class RefrigeratedProduct extends Product{
         this.drawerNumber = drawerNumber;
     }
 
+    public int getDrawerNumber() {
+        return drawerNumber;
+    }
+
     @Override
     public String toString() {
         return "RefrigeratedProduct { " +
