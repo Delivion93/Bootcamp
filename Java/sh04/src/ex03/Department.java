@@ -2,7 +2,7 @@ package ex03;
 
 public enum Department {
     ACCOUNTING("accounting",50),
-    COMPUTING("computing",80),
+    IT("computing",80),
     MANAGEMENT("management",100);
 
     private final String name;
