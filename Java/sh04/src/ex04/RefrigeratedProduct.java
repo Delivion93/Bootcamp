@@ -6,7 +6,7 @@ public class RefrigeratedProduct extends Product{
     public RefrigeratedProduct() {
     }
 
-    public RefrigeratedProduct(String name, int price, int drawerNumber) {
+    public RefrigeratedProduct(String name, float price, int drawerNumber) {
         super(name, price);
         this.drawerNumber = drawerNumber;
     }

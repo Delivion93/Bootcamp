@@ -6,7 +6,7 @@ public class FreshProduct extends Product{
     public FreshProduct() {
     }
 
-    public FreshProduct(String name, int price, int daysOfExpiration) {
+    public FreshProduct(String name, float price, int daysOfExpiration) {
         super(name, price);
         this.daysOfExpiration = daysOfExpiration;
     }

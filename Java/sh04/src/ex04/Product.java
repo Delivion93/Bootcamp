@@ -27,7 +27,7 @@ public class Product {
         return price;
     }
 
-    public Product(String name, int price) {
+    public Product(String name, float price) {
         this.id=idCounter;
         this.name = name;
         this.price = price;
