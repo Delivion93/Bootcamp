@@ -2,6 +2,7 @@ import ex01.Book;
 import ex02.PC;
 import ex03.Department;
 import ex03.Employees;
+import ex09.List;
 import exeptions.IncorrectNifFormatExeption;
 import exeptions.IncorrectRamException;
 
@@ -89,7 +90,23 @@ public class Main {
             e.printStackTrace();
         }
 
+        List<String> list = new List<>();
+        list.add("Test1");
+        list.add("Test2");
+        list.add("Test3");
+        list.add("Test4");
+        list.add("Test5");
+        list.add("Test6");
+        list.add("Test7");
+        list.add("Test8");
+        list.add("Test9");
+        list.add("Test10");
 
+        list.list();
+
+        list.delete("Test5");
+        System.out.println("______________________________");
+        list.list();
     }
 }
 
