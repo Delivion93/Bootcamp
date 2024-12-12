@@ -1,22 +1,63 @@
-#S olutions of SQLBolt Exercices
+# Solutions of SQLBolt Exercices
 
-## ex1
+## Ex1
 
-###T ask 1
+#### Task 1
+
+```SQL
 SELECT Title FROM Movies
+```
 
 ### Task2
 
+```SQL
 SELECT Director FROM Movies
+```
 
-### Task3
+#### Task3
 
-SELECT Title,Director FROM Movies
+```SQL
+SELECT Title, Director FROM Movies
+```
 
-### Task4
+#### Task4
 
-SELECT Title,Year FROM Movies
+```SQL
+SELECT Title, Year FROM Movies
+```
 
-### Task5
+#### Task5
 
-SELECT \* FROM Movies
+```SQL
+SELECT * FROM Movies
+```
+
+## Ex2
+
+#### Task 1
+
+```SQL
+SELECT * FROM movies
+WHERE id=6;
+```
+
+#### Task 2
+
+```SQL
+SELECT * FROM movies
+WHERE year between 2000 and 2010;
+```
+
+#### Task 3
+
+```SQL
+SELECT * FROM movies
+WHERE year not between 2000 and 2010;
+```
+
+#### Task 4
+
+```SQL
+SELECT title, year FROM movies
+WHERE year <= 2003
+```
