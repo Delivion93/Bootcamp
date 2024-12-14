@@ -270,19 +270,24 @@ WHERE Building IS Null;
 #### Task1
 
 ```SQL
-
+SELECT Title, (Domestic_sales+International_sales)/1000000 AS Millions_of_sales FROM Movies
+JOIN boxoffice
+    ON Movies.Id=Boxoffice.Movie_id;
 ```
 
 #### Task2
 
 ```SQL
-
+SELECT Title, Rating*10 AS Percent_of_Rating FROM Movies
+JOIN boxoffice
+    on Movies.Id=Boxoffice.Movie_id;
 ```
 
 #### Task3
 
 ```SQL
-
+SELECT Title, Year FROM Movies
+WHERE year % 2 = 0;
 ```
 
 ---
