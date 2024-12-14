@@ -47,4 +47,4 @@ Diseña una base de datos para una biblioteca que permita gestionar los libros y
 
 #### Diagrama ERD:
 
-![diagrama](/BBDD/diseno/sheet01/E-R%20diagrama.png)
+![diagrama](/BBDD/sheet01/E-R%20diagrama.png)

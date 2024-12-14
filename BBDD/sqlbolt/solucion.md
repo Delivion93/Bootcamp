@@ -240,3 +240,49 @@ FROM buildings
   LEFT JOIN employees
     ON building_name = building;
 ```
+
+---
+
+## Ex8
+
+#### Task1
+
+```SQL
+SELECT Name, Role FROM employees
+LEFT JOIN Buildings
+    ON Employees.Building=Buildings.Building_name
+WHERE Building_name IS Null;
+```
+
+#### Task2
+
+```SQL
+SELECT Building_name FROM Buildings
+LEFT JOIN Employees
+    ON Buildings.Building_name=Employees.Building
+WHERE Building IS Null;
+```
+
+---
+
+## Ex9
+
+#### Task1
+
+```SQL
+
+```
+
+#### Task2
+
+```SQL
+
+```
+
+#### Task3
+
+```SQL
+
+```
+
+---
