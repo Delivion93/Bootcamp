@@ -280,7 +280,7 @@ JOIN boxoffice
 ```SQL
 SELECT Title, Rating*10 AS Percent_of_Rating FROM Movies
 JOIN boxoffice
-    on Movies.Id=Boxoffice.Movie_id;
+    ON Movies.Id=Boxoffice.Movie_id;
 ```
 
 #### Task3
@@ -291,3 +291,123 @@ WHERE year % 2 = 0;
 ```
 
 ---
+
+## Ex10
+
+#### Task 1
+
+```SQL
+SELECT MAX(Years_employed) FROM employees;
+```
+
+#### Task 2
+
+```SQL
+SELECT Role,AVG(Years_employed)AS Average_Employed
+FROM Employees
+GROUP BY Role;
+```
+
+#### Task 3
+
+```SQL
+SELECT Building, SUM(Years_employed)
+FROM Employees
+GROUP BY Building;
+```
+
+---
+
+## Ex11
+
+#### Task1
+
+```SQL
+SELECT COUNT(Role) FROM Employees
+WHERE ROLE="Artist";
+```
+
+#### Task2
+
+```SQL
+SELECT Role, COUNT(Role) as Number_of_Emloyees
+FROM Employees
+GROUP BY Role;
+```
+
+#### Task3
+
+```SQL
+SELECT Role, SUM(Years_employed) as Total_years_employed
+FROM Employees
+GROUP BY Role
+HAVING Role="Engineer";
+```
+
+---
+
+## Ex12
+
+#### Task1
+
+```SQL
+SELECT Director, COUNT(Title) as Movies_count
+FROM Movies
+GROUP BY Director;
+```
+
+#### Task2
+
+```SQL
+SELECT Director, SUM(Domestic_sales+International_sales) AS Total_sales
+FROM Movies
+LEFT JOIN Boxoffice
+    ON Movies.ID=Boxoffice.Movie_id
+GROUP BY Director;
+```
+
+---
+
+## Ex13
+
+#### Task1
+
+```SQL
+INSERT INTO Movies (title,director,year,length_minutes)
+VALUES ("Toy Story 4","Artem Abramov", 2024, 93);
+```
+
+#### Task2
+
+```SQL
+INSERT INTO boxoffice  (movie_id,rating,domestic_sales, international_sales)
+VALUES (15,8.7, 340000000, 270000000);
+```
+
+---
+
+## Ex14
+
+#### Task1
+
+```SQL
+UPDATE movies
+SET Director = "John Lasseter"
+WHERE id = 2;
+```
+
+#### Task2
+
+```SQL
+UPDATE movies
+SET year = 1999
+WHERE id = 3;
+```
+
+#### Task3
+
+```SQL
+UPDATE movies
+SET Title = "Toy Story 3", Director ="Lee Unkrich"
+WHERE id = 11;
+```
