@@ -34,7 +34,7 @@ public class TareaController {
     public String deleteTarea(@PathVariable int index){
         if(index>=0&&index<tareas.size()){
             String tareaEliminada = tareas.remove(index);
-            return String."Tarea eliminada "+tareaEliminada;
+            return String.format("Tarea eliminada %s",tareaEliminada);
         }
         return "index no valido";
     }

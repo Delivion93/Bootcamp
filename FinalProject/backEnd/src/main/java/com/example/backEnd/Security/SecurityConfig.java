@@ -10,16 +10,18 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
+
     @Bean
-    public SecurityFilterChain securityFilterChain (HttpSecurity httpSecurity) throws Exception{
+    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity
                 .formLogin(httpForm -> {
                     httpForm
                             .loginPage("/login").permitAll();
                 })
                 .authorizeHttpRequests(registry -> {
-                    registry.requestMatchers("/req/signup","/css/**","/js/**").permitAll();
-                    registry.anyRequest().authenticated();
+                    registry
+                            .requestMatchers("/req/signup", "/css/**", "/js/**").permitAll()
+                            .anyRequest().authenticated();
                 })
                 .build();
     }
