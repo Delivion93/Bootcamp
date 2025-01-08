@@ -10,7 +10,7 @@ import java.util.List;
 public class TareaController {
 
     private List<String> tareas = new ArrayList<>();
-    
+
     @GetMapping
     public List<String> getTareas(){
         return tareas;
