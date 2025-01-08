@@ -5,7 +5,7 @@ const arrayDeProductos = [
   {
     nombre: "Cervaza",
     precio: "incalculable",
-    decsripcion: "que cosa mas rika",
+    decsripcion: "que cosa mas rica",
   },
   { nombre: "Vodka", precio: "5 euro", decsripcion: "que cosa mas fea" },
   { nombre: "Manzana", precio: "2 euro", decsripcion: "fruta" },
